@@ -25,4 +25,4 @@ Landing page oficial da **Kinkajou Dev** — um estúdio digital solo de desenvo
 Pedro Vinicius  
 [Portfólio](https://pedroviniciussd.github.io/portfolio-pv)  
 [GitHub](https://github.com/PedroViniciussd)
-[Linkedin] (https://www.linkedin.com/in/pedevro/)
+[Linkedin](https://www.linkedin.com/in/pedevro/)
