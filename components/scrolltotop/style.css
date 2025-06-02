@@ -1,0 +1,27 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 31px;
+    right: 20px;
+    z-index: 1000;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0.6rem;
+    font-size: 1.5rem;
+    color: #fff;
+    animation: pulse 2s infinite;
+    background: linear-gradient(90deg, var(--color-cyan), var(--color-purple), var(--color-pink));
+    border-radius: 50px;
+    height: 39px;
+}
+  
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  

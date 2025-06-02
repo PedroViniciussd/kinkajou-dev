@@ -1,0 +1,103 @@
+.parceiros-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+  margin-top:25px;
+  margin-bottom: 30px;
+}
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 10px;
+  padding: 1rem 2rem;
+  scroll-snap-type: x mandatory;
+}
+
+.parceiro-card {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  min-width: 180px;
+  max-width: 180px;
+  background: linear-gradient(90deg, var(--color-cyan), var(--color-purple), var(--color-pink));
+  position: relative;
+  z-index: 1;
+}
+
+.parceiro-card > a {
+  display: block;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.parceiro-logo {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 100px;
+  padding: 1rem;
+  border-radius: 8px;
+  height: 15vh;
+}
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(90deg, var(--color-cyan), var(--color-purple), var(--color-pink));
+  border: none;
+  color: white;
+  font-size: 1.7rem;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0.4rem 0.6rem;
+  border-radius: 50px;
+  transition: background 0.3s ease;
+}
+
+.carousel-button.left {
+  left: 0;
+}
+.carousel-button.right {
+  right: 0;
+}
+
+
+
+@media (max-width: 768px) {
+  .carousel-button {
+    font-size: 1rem;
+    padding: 0.3rem 0.5rem;
+    width: 30px;
+    height: 30px;
+  }
+
+  .carousel-button.left {
+    left: 5px;
+    right: auto; 
+  }
+
+  .carousel-button.right {
+    right: 5px;
+    left: auto;
+  }
+
+  .parceiro-card {
+    min-width: 140px;
+    max-width: 140px;
+  }
+}
+
+

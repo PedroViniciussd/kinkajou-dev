@@ -1,0 +1,19 @@
+.frase-animada {
+    color: var(--color-white);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    transition: opacity 0.5s ease;
+    max-width: 661px;
+}
+  
+  .fade-in {
+    opacity: 1;
+  }
+  
+  .fade-out {
+    opacity: 0;
+  }
+  
+
+  

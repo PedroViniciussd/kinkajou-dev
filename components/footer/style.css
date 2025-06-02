@@ -1,0 +1,128 @@
+.footer-container {
+    background-color: #191919;
+    color: #fff;
+    padding: 40px 0px 0;
+    font-size: 0.95rem;
+  }
+
+  .footer.topo.borda-gradient {
+    margin-top: 20px;
+}
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 20px;
+  }
+  
+  .footer-left, .footer-center, .footer-right {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .footer-logo {
+    width: 90px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-icon {
+    margin-right: 8px;
+  }
+  
+  .footer-link {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+  }
+  
+  .footer-link:hover {
+    color: #00bfa6;
+  }
+  
+  .footer-center h4,
+  .footer-right h4 {
+    margin-bottom: 15px;
+  }
+  
+  .footer-menu {
+    list-style: none;
+    padding: 0;
+    line-height: 38px;
+}
+  
+  .footer-menu li {
+    margin: 5px 0;
+  }
+  
+  .footer-menu a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-menu a:hover {
+    color: var(--color-pink);
+  }
+  
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .newsletter-form input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .newsletter-form button {
+    padding: 8px;
+    background: linear-gradient(90deg, var(--color-cyan), var(--color-purple), var(--color-pink));
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .newsletter-form button:hover {
+    background: linear-gradient(90deg, var(--color-cyan), var(--color-purple), var(--color-pink));
+}
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.85rem;
+  }
+  
+  .footer-bottom p {
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+.footer-container {
+  background-color: #191919;
+  color: #fff;
+  padding: 40px 16px 0;
+  font-size: 0.95rem;
+}
+}
+
+@media (max-width: 820px) {
+  .footer-container {
+    padding: 40px 16px 0;
+  }
+}
