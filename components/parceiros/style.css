@@ -33,6 +33,11 @@
   background-color: #fff;
 }
 
+.carousel-container .parceiro-card:nth-child(3) > a {
+  background-color: #000 !important;
+}
+
+
 .parceiro-logo {
   width: 100%;
   height: auto;
@@ -73,6 +78,7 @@
 .carousel-button.right {
   right: 0;
 }
+
 
 
 

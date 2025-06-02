@@ -2,7 +2,7 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import { Search } from "lucide-react";
-import styles from "./style.css";
+import './style.css';
 
 const projetos = [
   {
@@ -16,12 +16,19 @@ const projetos = [
     imagem: "/assets/image/projeto-universomaterno.png",
     imagemModal: "/assets/image/projeto-universomaternoficial.png",
     link: "https://universomaternooficial.com.br/"
-  }
+  },
+  {
+    nome: "Sl23 Gym - Sistema de Academia",
+    imagem: "/assets/image/projeto-sl23gym.png",
+    imagemModal: "/assets/image/slgym-projeto.png",
+    link: "https://sl-gym-6fba8.web.app/"
+  },
 ];
 
 export default function Projetos() {
   const carouselRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [cardWidth, setCardWidth] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState(null);
   const [modalLink, setModalLink] = useState(null);
@@ -29,8 +36,7 @@ export default function Projetos() {
 
   const scrollToIndex = (index) => {
     const container = carouselRef.current;
-    if (!container) return;
-    const cardWidth = container.scrollWidth / projetos.length;
+    if (!container || cardWidth === 0) return;
     container.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
     setActiveIndex(index);
   };
@@ -39,16 +45,26 @@ export default function Projetos() {
     const container = carouselRef.current;
     if (!container) return;
 
+    const updateCardWidth = () => {
+      const card = container.querySelector('.carousel-card');
+      if (card) setCardWidth(card.offsetWidth + 24); // +gap
+    };
+
+    updateCardWidth();
+    window.addEventListener('resize', updateCardWidth);
+
     const handleScroll = () => {
-      const scrollLeft = container.scrollLeft;
-      const cardWidth = container.scrollWidth / projetos.length;
-      const index = Math.round(scrollLeft / cardWidth);
+      const index = Math.round(container.scrollLeft / cardWidth);
       setActiveIndex(index);
     };
 
     container.addEventListener('scroll', handleScroll);
-    return () => container.removeEventListener('scroll', handleScroll);
-  }, []);
+
+    return () => {
+      window.removeEventListener('resize', updateCardWidth);
+      container.removeEventListener('scroll', handleScroll);
+    };
+  }, [cardWidth]);
 
   const openModal = (imagemModal, link) => {
     setModalImage(imagemModal);
@@ -63,15 +79,13 @@ export default function Projetos() {
     setZoom(false);
   };
 
-  const toggleZoom = () => {
-    setZoom(!zoom);
-  };
+  const toggleZoom = () => setZoom(!zoom);
 
   return (
     <section id="projetos" className="text-background projetos-section">
       <h2>Projetos feitos pela Kinkajou</h2>
       <p className="projetos-desc">
-       De sites criativos a soluções sob medida, aqui estão alguns dos nossos orgulhos digitais!
+        De sites criativos a soluções sob medida, aqui estão alguns dos nossos orgulhos digitais!
       </p>
 
       <div className="carousel-wrapper">

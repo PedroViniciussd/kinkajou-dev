@@ -10,7 +10,8 @@
     margin-bottom: 1rem;
     font-size: 17px;
   }
-  
+
+
   .carousel-wrapper {
     position: relative;
     display: flex;
@@ -66,7 +67,7 @@
     border-radius: 8px;
     display: block;
     width: 100%;
-    height: auto;
+    height: 194px;
     background-color: #101010;
   }
   
@@ -204,12 +205,33 @@ button.icon-btn {
     display: none;
 }
 
-.parceiros-section .carousel-container{
-justify-content:unset;
-}
+
 
   @media (max-width: 768px) {
 
+    .carousel-card > img{
+      height: auto;
+    }
+
+      .carousel-card {
+        flex: 0 0 100%;
+        left: 100%;
+    }
+  
+.carousel-card {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+   
+  }
+
+  .carousel-container {
+    padding: 0;
+    gap: 1.5rem;
+  }
+
+  .carousel-image {
+    height: auto;
+  }
     .carousel-container {
         display: flex;
         justify-content: block;
@@ -234,15 +256,9 @@ justify-content:unset;
         padding: 0px 10px; 
     }
     
-    .carousel-button.left,
-    .carousel-button.right {
-      font-size: 1.1rem;
-      left: -1rem;
-      right: -1rem;
-    }
 
-    #projetos .carousel-card {
-        flex: 0 0 calc((100% - 4.5rem) / 1);
+    .carousel-card {
+  flex: 0 0 100%;
     }
 
 
