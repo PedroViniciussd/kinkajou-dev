@@ -58,6 +58,7 @@ function Banner({ onMostrarConteudo }) {
         </button>
       </div>
     </div>
+    
   )
 }
 

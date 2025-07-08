@@ -2,8 +2,20 @@
     padding-top: 60px;
     padding-bottom: 60px;
     text-align: center;
-    margin-top: 19px;
   }
+
+  .projetos-section.text-background::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    border-radius: 15px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(0px);
+    z-index: 0;
+}
   
 .projetos-desc {
     margin-top: 0.5rem;
@@ -59,7 +71,7 @@
     box-sizing: border-box;
     position: relative;
     z-index: 1;
-    padding: 4px; 
+    padding: 2px; 
     background: linear-gradient(90deg, var(--color-cyan), var(--color-purple), var(--color-pink));
   }
 

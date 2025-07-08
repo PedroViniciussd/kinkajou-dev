@@ -18,10 +18,10 @@ const projetos = [
     link: "https://universomaternooficial.com.br/"
   },
   {
-    nome: "Sl23 Gym - Sistema de Academia",
-    imagem: "/assets/image/projeto-sl23gym.png",
-    imagemModal: "/assets/image/slgym-projeto.png",
-    link: "https://sl-gym-6fba8.web.app/"
+    nome: "Pousada Princesa da Serra",
+    imagem: "/assets/image/princesa-da-serra-logo.WEBP",
+    imagemModal: "/assets/image/projeto-pousada-princesadaserra.png",
+    link: "https://www.pousadaprincesadaserra.com.br/"
   },
 ];
 
@@ -83,31 +83,33 @@ export default function Projetos() {
 
   return (
     <section id="projetos" className="text-background projetos-section">
-      <h2>Projetos feitos pela Kinkajou</h2>
-      <p className="projetos-desc">
-        De sites criativos a soluções sob medida, aqui estão alguns dos nossos orgulhos digitais!
-      </p>
+      <div className="container"> 
+        <h2>Projetos feitos pela Kinkajou</h2>
+        <p className="projetos-desc">
+          De sites criativos a soluções sob medida, aqui estão alguns dos nossos orgulhos digitais!
+        </p>
 
-      <div className="carousel-wrapper">
-        <div className="carousel-container" ref={carouselRef}>
-          {projetos.map((projeto, index) => (
-            <a
-              key={index}
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                openModal(projeto.imagemModal, projeto.link);
-              }}
-              className="carousel-card"
-            >
-              <img
-                src={projeto.imagem}
-                alt={`Capa do ${projeto.nome}`}
-                className="carousel-image"
-                loading="lazy"
-              />
-            </a>
-          ))}
+        <div className="carousel-wrapper">
+          <div className="carousel-container" ref={carouselRef}>
+            {projetos.map((projeto, index) => (
+              <a
+                key={index}
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  openModal(projeto.imagemModal, projeto.link);
+                }}
+                className="carousel-card"
+              >
+                <img
+                  src={projeto.imagem}
+                  alt={`Capa do ${projeto.nome}`}
+                  className="carousel-image"
+                  loading="lazy"
+                />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
 

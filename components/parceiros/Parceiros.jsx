@@ -7,12 +7,12 @@ import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 import Logo1 from '/public/assets/image/logo-billconnect.png';
 import Logo2 from '/public/assets/image/universomaterno-logo.png';
-import Logo3 from '/public/assets/image/slgym-logo.png';
+import Logo3 from '/public/assets/image/princesa-da-serra-logo.WEBP';
 
 const parceiros = [
   { nome: "Parceiro 1", imagem: Logo1, url: "https://billconnect.com.br/" },
   { nome: "Parceiro 2", imagem: Logo2, url: "https://universomaternooficial.com.br/" },
-  { nome: "Parceiro 3", imagem: Logo3, url: "https://sl-gym-6fba8.web.app/" },
+  { nome: "Parceiro 3", imagem: Logo3, url: "https://www.pousadaprincesadaserra.com.br/" },
 ];
 
 export default function Parceiros() {
